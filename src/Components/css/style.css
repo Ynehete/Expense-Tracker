@@ -1,0 +1,114 @@
+.span {
+    display: inline-block;
+    padding-left: 600px;
+    padding-top: 50px;
+}
+
+.balance {
+    display: inline-block;
+    background-color: lightgreen;
+    padding: 10px;
+    margin-right: 5px;
+    border: 1px solid green;
+    border-radius: 5px;
+}
+
+.expence {
+    display: inline-block;
+    background-color: lightcoral;
+    padding: 10px;
+    border: 1px solid red;
+    border-radius: 5px;
+}
+
+.heading {
+    font-family: 'Arial', sans-serif;
+    font-size: 2.5em;
+    color: #333;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.hisNadd {
+    /* display: inline-block; */
+    padding-left: 600px;
+    padding-top: 50px;
+}
+
+.addTransaction {
+    display: inline-block;
+    margin-right: 300px;
+    margin-left: -300px;
+    margin-top: 1px;
+    padding-top: 1px;
+    max-width: 400px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+    font-family: Arial, sans-serif;
+}
+
+.history {
+    display: inline-block;
+    /* border-color: #333; */
+    padding: 10px;
+    /* border:1px solid black; */
+    margin-right: -300px;
+    margin-left: 1px;
+    max-width: 400px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+    font-family: Arial, sans-serif;
+    width: 60%; /* Adjust width as needed */
+    height: 300px; /* Adjust height as needed */
+    overflow-y: auto; /* Scroll vertically */
+    overflow-x: hidden; /* Prevent horizontal scroll */
+    border: 1px solid #ccc; /* Optional: Add a border for visual effect */
+     /*padding: 10px; Optional: Add padding for content */
+    box-sizing: border-box;
+}
+
+.hisInner {
+    border-color: #333;
+    border: 1px solid black;
+}
+
+.form-title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.form-button {
+    background-color: #45a049;
+}
+
+.form-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+.transaction-item{
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}

@@ -1,23 +1,44 @@
-import logo from './logo.svg';
+import React,{useState} from "react";
 import './App.css';
+import InoutRem from './Components/InOutRem';
+import Heading from "./Components/Heading";
+import History from "./Components/History";
 
 function App() {
+
+  const [transactions, setTransactions] = useState([]);
+
+  const calculateBalance = () => {
+    let balance = 0;
+    transactions.forEach(transaction => {
+        if (transaction.type === 'credit') {
+            balance += transaction.amount;
+        } else {
+            balance -= transaction.amount;
+        }
+    });
+    return balance;
+};
+const calculateExpenses = () => {
+  let expenses = 0;
+  transactions.forEach(transaction => {
+      if (transaction.type === 'debit') {
+          expenses += transaction.amount;
+      }
+  });
+  return expenses;
+};
+const addTransaction = (newTransaction) => {
+  setTransactions([...transactions, newTransaction]);
+};
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Heading></Heading>
+      <InoutRem balance={calculateBalance()} expense={calculateExpenses()}></InoutRem>
+      <div>
+        <History transactions={transactions} addTransaction={addTransaction}> 
+        </History>
+      </div>
     </div>
   );
 }
